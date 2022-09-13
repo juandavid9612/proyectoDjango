@@ -1,7 +1,7 @@
 from django import forms  
-from appDjango.models import Empleados
+from appDjango.models import Empleados, Experiencias, Estudios
 
 class EmpleadoRegistro(forms.ModelForm):  
     class Meta:  
-        model = Empleados  
+        model = Empleados
         fields = "__all__"  
