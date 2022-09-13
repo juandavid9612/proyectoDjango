@@ -151,7 +151,88 @@
 		</div>
 	</div>
 </div>
+<div class="row">
+	<div class="col-12">
+		<div class="card">
+			<div class="card-header">			
+		
+					<h4 class="card-title">Panel de control </h4> 
+			
+				<a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+				<div class="heading-elements">
+					<ul class="list-inline mb-0">
+						<li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+						<li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+						<li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+						<li><a data-action="close"><i class="ft-x"></i></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="card-content collapse show">
+				<div class="card-body">
+					<div class="table-responsive">				
+						<!--
+							<p align="center">
+							<a href="charts.html" data-action="reload">  <button type="button" class="btn btn-dark btn-min-width mr-1 mb-1">Ver Graficas</button></a>
+						-->
+						<form method="POST" class="post-form" action="/administracion">  
+							{% csrf_token %}  
+						<div class="container">  
+					<br>  
+						<div class="form-group row">  
+						<label class="col-sm-1 col-form-label"></label>  
+						<div class="col-sm-4">  
+						<h3>Estudios</h3>  
+						</div>  
+					  </div>  
+						<div class="form-group row">  
+						<label class="col-sm-2 col-form-label">Año:</label>  
+						<div class="col-sm-4">  
+						  {{ form.nombre }}  
+						</div>  
+					  </div>  
+					  <div class="form-group row">  
+						<label class="col-sm-2 col-form-label">Apellido:</label>  
+						<div class="col-sm-4">  
+						  {{ form2.mes }}  
+						</div>  
+					  </div>  
+						<div class="form-group row">  
+						<label class="col-sm-2 col-form-label">Tipo de documento:</label>  
+						<div class="col-sm-4">  
+						  {{ form2.estudio }}  
+						</div>  
+					  </div>  
+						<div class="form-group row">  
+						<label class="col-sm-2 col-form-label">Numero de documento:</label>  
+						<div class="col-sm-4">  
+						  {{ form2.institucion }}  
+						</div>  
+					  </div>
+					  <div class="form-group row">  
+						<label class="col-sm-2 col-form-label">Correo:</label>  
+						<div class="col-sm-4">  
+						  {{ form2.tituloObtenido }}  
+						</div>  
+					  </div>				    
+					    
+						<div class="form-group row">  
+						<label class="col-sm-1 col-form-label"></label>  
+						<div class="col-sm-4">  
+						<button type="submit" class="btn btn-primary">Registrar Estudios</button>  
+						</div>  
+					  </div>  
+						</div>  
+					</form>  
 
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+	</div>
+</div>
 <!-- Table head options end -->
 
         </div>
