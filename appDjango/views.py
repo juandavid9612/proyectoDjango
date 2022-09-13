@@ -7,4 +7,4 @@ def inicio(request):
         "Empleados":Empleados.objects.all()
 
         }
-    return render(request, 'index.html')
+    return render(request, 'index.html',contexto)

@@ -1,15 +1,6 @@
 from django.db import models
 
 # Create your models here.
-#(Nombre, Apellido, Tipo de documento, numero de documento, correo, teléfono, tipo de sangre), 
-class Empleados(models.Model):
-    nombre = models.CharField( max_length=50)
-    apellido = models.CharField( max_length=50)
-    tipoDocumento = models.CharField(max_length=25)
-    numeroDocumento = models.IntegerField()
-    correo = models.EmailField(max_length=254)
-    telefono = models.IntegerField()
-    tipoSangre = models.CharField( max_length=25)
 
 #(Ano, Mes, Estudio, Institución, Titulo obtenido), 
 class Estudios(models.Model):
@@ -28,3 +19,16 @@ class Experiencias(models.Model):
     cargo = models.CharField( max_length=50)
     responsabilidades = models.CharField( max_length=50)
     logrosRealizados = models.CharField( max_length=50)
+
+#(Nombre, Apellido, Tipo de documento, numero de documento, correo, teléfono, tipo de sangre), 
+class Empleados(models.Model):
+    nombre = models.CharField( max_length=50)
+    apellido = models.CharField( max_length=50)
+    tipoDocumento = models.CharField(max_length=25)
+    numeroDocumento = models.FloatField()
+    correo = models.EmailField(max_length=254)
+    telefono = models.IntegerField()
+    tipoSangre = models.CharField( max_length=25)
+    idEstudios = models.ForeignKey(Estudios, on_delete=models.CASCADE,null=True, blank=True)
+    idExperiencias = models.ForeignKey(Experiencias, on_delete=models.CASCADE,null=True, blank=True)
+    
